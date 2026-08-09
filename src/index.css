@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
+:root { color-scheme: dark; }
 
-html {
-  scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  font-family: "SF Pro Display", "Segoe UI", sans-serif;
-  background: #090b12;
-  color: #e9edf8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a1210;
+  color: #e2e8f0;
+  overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
+/* custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a1210; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06b6d4, #14b8a6, #0ea5e9);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #2dd4bf, #38bdf8);
 }
 
-::selection {
-  background: rgba(90, 163, 255, 0.35);
+::selection { background: rgba(6,182,212,.35); color: white; }
+
+/* focus ring */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(6,182,212,.6);
+  box-shadow: 0 0 0 3px rgba(6,182,212,.15);
 }
 
-.grid-glow {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
-}
+/* border opacity helpers */
+.border-white\/8 { border-color: rgba(255,255,255,.08); }
+.bg-white\/3 { background-color: rgba(255,255,255,.03); }
