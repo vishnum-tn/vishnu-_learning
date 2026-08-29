@@ -4,17 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        surface: "#0a1210",
-        panel: "#111d19",
+        surface: "#0a0e27",
+        panel: "#111535",
         ink: "#E9EDF8",
-        accent: "#06b6d4",
-        accent2: "#14b8a6"
+        accent: "#60a5fa",
+        accent2: "#818cf8"
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(6, 182, 212, 0.2), 0 18px 60px rgba(6, 182, 212, 0.35)"
+        glow: "0 0 0 1px rgba(96, 165, 250, 0.2), 0 18px 60px rgba(96, 165, 250, 0.35)"
       },
       backgroundImage: {
-        "hero-radial": "radial-gradient(1200px circle at 15% 10%, rgba(6, 182, 212, 0.28), transparent 42%), radial-gradient(1200px circle at 85% 20%, rgba(20, 184, 166, 0.22), transparent 38%)"
+        "hero-radial": "radial-gradient(1200px circle at 15% 10%, rgba(96, 165, 250, 0.28), transparent 42%), radial-gradient(1200px circle at 85% 20%, rgba(129, 140, 248, 0.22), transparent 38%)"
       }
     }
   },

@@ -17,10 +17,10 @@ const stats = [
 ];
 
 const skills = [
-  { name: "Python", level: 82, icon: Code2, color: "from-blue-500 to-cyan-500" },
-  { name: "Java Backend", level: 68, icon: Server, color: "from-cyan-500 to-teal-500" },
+  { name: "Python", level: 82, icon: Code2, color: "from-blue-500 to-indigo-500" },
+  { name: "Java Backend", level: 68, icon: Server, color: "from-indigo-500 to-purple-500" },
   { name: "HTML / CSS / JS", level: 86, icon: Code2, color: "from-sky-500 to-blue-500" },
-  { name: "AI / Gen AI", level: 74, icon: Brain, color: "from-teal-500 to-emerald-500" },
+  { name: "AI / Gen AI", level: 74, icon: Brain, color: "from-purple-500 to-pink-500" },
 ];
 
 const projects = [
@@ -30,7 +30,7 @@ const projects = [
     tech: ["Python", "Pygame"],
     github: "https://github.com",
     live: "https://example.com",
-    color: "from-blue-600 to-cyan-600",
+    color: "from-blue-600 to-indigo-600",
   },
   {
     title: "AI Chatbot",
@@ -38,7 +38,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com",
     live: "https://example.com",
-    color: "from-cyan-600 to-teal-600",
+    color: "from-blue-600 to-indigo-600",
   },
   {
     title: "AI Product (Soon)",
@@ -46,7 +46,7 @@ const projects = [
     tech: ["Gen AI", "React", "API"],
     github: "https://github.com",
     live: "https://example.com",
-    color: "from-teal-600 to-sky-600",
+    color: "from-indigo-600 to-purple-600",
   },
 ];
 
@@ -86,22 +86,22 @@ export default function App() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 150, damping: 25 });
 
   return (
-    <div className="min-h-screen bg-[#0a1210] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0a0e27] text-white overflow-x-hidden">
       {/* scroll progress */}
       <motion.div className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[60]"
-        style={{ scaleX, background: "linear-gradient(90deg,#06b6d4,#14b8a6,#0ea5e9,#0d9488)" }} />
+        style={{ scaleX, background: "linear-gradient(90deg,#60a5fa,#818cf8,#a78bfa,#60a5fa)" }} />
 
       {/* grid overlay */}
       <div className="pointer-events-none fixed inset-0 z-0"
-        style={{ backgroundImage: "linear-gradient(rgba(6,182,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,166,.04) 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
+        style={{ backgroundImage: "linear-gradient(rgba(96,165,250,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(129,140,248,.04) 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
 
       {/* ── NAV ── */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#0a1210]/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#0a0e27]/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <motion.a href="#home" className="flex items-center gap-2 text-lg font-bold"
             whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center text-xs font-black">V</span>
-            <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">Vishnu</span>
+            <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-xs font-black">V</span>
+            <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Vishnu</span>
           </motion.a>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
@@ -111,7 +111,7 @@ export default function App() {
                 initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }} whileHover={{ y: -2 }}>
                 {n}
-                <motion.span className="absolute -bottom-1 left-0 h-px bg-gradient-to-r from-cyan-500 to-teal-500"
+                <motion.span className="absolute -bottom-1 left-0 h-px bg-gradient-to-r from-blue-500 to-indigo-500"
                   initial={{ width: 0 }} whileHover={{ width: "100%" }} transition={{ duration: 0.25 }} />
               </motion.a>
             ))}
@@ -119,8 +119,8 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-3">
             <motion.a href="mailto:vishnums775@gmail.com"
-              className="rounded-full bg-gradient-to-r from-cyan-600 to-teal-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6,182,212,.5)" }}
+              className="rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/30"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(96,165,250,.5)" }}
               whileTap={{ scale: 0.95 }}>
               Hire Me
             </motion.a>
@@ -133,7 +133,7 @@ export default function App() {
 
         <AnimatePresence>
           {menuOpen && (
-            <motion.div className="md:hidden border-t border-white/5 bg-[#0a1210] px-6 py-4 space-y-3"
+            <motion.div className="md:hidden border-t border-white/5 bg-[#0a0e27] px-6 py-4 space-y-3"
               initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}>
               {navLinks.map((n) => (
@@ -151,8 +151,8 @@ export default function App() {
 
           {/* left */}
           <div>
-            <motion.div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300"
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, boxShadow: ["0 0 0 0 rgba(6,182,212,0)", "0 0 0 12px rgba(6,182,212,.1)", "0 0 0 0 rgba(6,182,212,0)"] }}
+            <motion.div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-300"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, boxShadow: ["0 0 0 0 rgba(96,165,250,0)", "0 0 0 12px rgba(96,165,250,.1)", "0 0 0 0 rgba(96,165,250,0)"] }}
               transition={{ duration: 1.5, repeat: Infinity }}>
               <Sparkles className="h-4 w-4" />
               Trusted learner &amp; AI enthusiast
@@ -162,7 +162,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
               <span className="text-white">Build The</span><br />
               <span className="text-white">Future</span><br />
-              <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-400 bg-clip-text text-transparent"
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent"
                 style={{ backgroundSize: "200% auto", animation: "gradShift 4s linear infinite" }}>
                 With Code.
               </span>
@@ -177,14 +177,14 @@ export default function App() {
             <motion.div className="mt-8 flex flex-wrap gap-4"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }}>
               <motion.a href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-600 to-teal-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/40"
-                whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(6,182,212,.6)" }}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/40"
+                whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(96,165,250,.6)" }}
                 whileTap={{ scale: 0.95 }}>
                 <Rocket className="h-4 w-4" /> View Projects
               </motion.a>
               <motion.a href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur"
-                whileHover={{ scale: 1.06, borderColor: "rgba(6,182,212,.6)", backgroundColor: "rgba(6,182,212,.12)" }}
+                whileHover={{ scale: 1.06, borderColor: "rgba(96,165,250,.6)", backgroundColor: "rgba(96,165,250,.12)" }}
                 whileTap={{ scale: 0.95 }}>
                 Contact Me <ArrowRight className="h-4 w-4" />
               </motion.a>
@@ -195,7 +195,7 @@ export default function App() {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
               {stats.map((s, i) => (
                 <div key={s.label}>
-                  <div className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                  <div className="text-3xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                     {s.value.replace(/\d+/, "")==="+" ? <><AnimatedCounter end={parseInt(s.value)} suffix="+" /></> :
                       s.value.includes("%") ? <><AnimatedCounter end={parseInt(s.value)} suffix="%" /></> : s.value}
                   </div>
@@ -209,7 +209,7 @@ export default function App() {
           <motion.div className="relative hidden lg:block"
             initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.5 }}>
             <motion.div animate={{ y: [0, -14, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-[#0d1a16] to-[#0e1d18] p-6 shadow-2xl shadow-cyan-900/40">
+              className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-[#0d1a16] to-[#0e1d18] p-6 shadow-2xl shadow-blue-900/40">
               {/* fake window bar */}
               <div className="flex items-center gap-2 mb-5">
                 <span className="h-3 w-3 rounded-full bg-red-500" />
@@ -219,13 +219,13 @@ export default function App() {
               </div>
               {/* fake code lines */}
               {[
-                { w: "w-3/4", c: "bg-cyan-500/60" },
-                { w: "w-1/2", c: "bg-teal-500/40" },
+                { w: "w-3/4", c: "bg-blue-500/60" },
+                { w: "w-1/2", c: "bg-indigo-500/40" },
                 { w: "w-5/6", c: "bg-blue-500/50" },
                 { w: "w-2/3", c: "bg-sky-500/40" },
                 { w: "w-3/5", c: "bg-emerald-500/40" },
-                { w: "w-4/5", c: "bg-cyan-500/30" },
-                { w: "w-1/3", c: "bg-teal-500/50" },
+                { w: "w-4/5", c: "bg-blue-500/30" },
+                { w: "w-1/3", c: "bg-indigo-500/50" },
               ].map((l, i) => (
                 <motion.div key={i} className={`h-2.5 rounded-full mb-3 ${l.w} ${l.c}`}
                   animate={{ opacity: [0.4, 1, 0.4] }}
@@ -234,9 +234,9 @@ export default function App() {
               {/* stat chips */}
               <div className="mt-6 grid grid-cols-3 gap-3">
                 {[
-                  { label: "Commits", val: "142", c: "from-cyan-500/20 to-teal-500/20 border-cyan-500/30" },
-                  { label: "Projects", val: "10+", c: "from-teal-500/20 to-blue-500/20 border-teal-500/30" },
-                  { label: "Skills", val: "15+", c: "from-sky-500/20 to-cyan-500/20 border-sky-500/30" },
+                  { label: "Commits", val: "142", c: "from-blue-500/20 to-indigo-500/20 border-blue-500/30" },
+                  { label: "Projects", val: "10+", c: "from-blue-500/20 to-indigo-500/20 border-blue-500/30" },
+                  { label: "Skills", val: "15+", c: "from-indigo-500/20 to-purple-500/20 border-indigo-500/30" },
                 ].map((c) => (
                   <div key={c.label} className={`rounded-xl border bg-gradient-to-br ${c.c} p-3 text-center`}>
                     <div className="text-lg font-bold text-white">{c.val}</div>
@@ -245,13 +245,13 @@ export default function App() {
                 ))}
               </div>
               {/* glow */}
-              <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-cyan-500/10 via-transparent to-teal-500/10 pointer-events-none" />
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10 pointer-events-none" />
             </motion.div>
             {/* floating accent orbs */}
             <motion.div animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360] }} transition={{ duration: 5, repeat: Infinity }}
-              className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-cyan-500/30 to-teal-500/30 blur-2xl" />
+              className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-blue-500/30 to-indigo-500/30 blur-2xl" />
             <motion.div animate={{ scale: [1.2, 1, 1.2] }} transition={{ duration: 3.5, repeat: Infinity }}
-              className="absolute -bottom-6 -left-6 h-20 w-20 rounded-full bg-gradient-to-br from-blue-500/25 to-cyan-500/25 blur-2xl" />
+              className="absolute -bottom-6 -left-6 h-20 w-20 rounded-full bg-gradient-to-br from-blue-500/25 to-indigo-500/25 blur-2xl" />
           </motion.div>
         </div>
 
@@ -265,7 +265,7 @@ export default function App() {
       {/* ── SKILLS ── */}
       <section id="skills" className="mx-auto max-w-7xl px-6 py-24">
         <motion.div className="mb-12" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Skills</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">Skills</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Core tools I grow with</h2>
         </motion.div>
         <div className="grid md:grid-cols-1 gap-5">
@@ -274,7 +274,7 @@ export default function App() {
               className="rounded-2xl border border-white/8 bg-white/3 p-6 relative overflow-hidden group cursor-pointer backdrop-blur-sm"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ scale: 1.03, borderColor: "rgba(6,182,212,.4)", boxShadow: "0 20px 50px rgba(6,182,212,.2)" }}>
+              whileHover={{ scale: 1.03, borderColor: "rgba(96,165,250,.4)", boxShadow: "0 20px 50px rgba(96,165,250,.2)" }}>
               <motion.div className={`absolute inset-0 bg-gradient-to-br ${sk.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               <div className="flex items-center justify-between mb-4 relative z-10">
                 <div className="flex items-center gap-3">
@@ -301,7 +301,7 @@ export default function App() {
       {/* ── PROJECTS ── */}
       <section id="projects" className="mx-auto max-w-7xl px-6 py-24">
         <motion.div className="mb-12" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">Projects</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Projects</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Proof of learning</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -310,7 +310,7 @@ export default function App() {
               className="group rounded-2xl border border-white/8 bg-white/3 p-6 relative overflow-hidden cursor-pointer backdrop-blur-sm flex flex-col"
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.13 }}
-              whileHover={{ y: -10, borderColor: "rgba(6,182,212,.5)", boxShadow: "0 30px 60px rgba(6,182,212,.25)" }}>
+              whileHover={{ y: -10, borderColor: "rgba(96,165,250,.5)", boxShadow: "0 30px 60px rgba(96,165,250,.25)" }}>
               {/* top gradient bar */}
               <div className={`h-1 w-full rounded-full bg-gradient-to-r ${p.color} mb-5`} />
               <motion.div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
@@ -320,7 +320,7 @@ export default function App() {
                 {p.tech.map((t) => (
                   <motion.span key={t}
                     className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"
-                    whileHover={{ scale: 1.1, backgroundColor: "rgba(6,182,212,.2)" }}>{t}</motion.span>
+                    whileHover={{ scale: 1.1, backgroundColor: "rgba(96,165,250,.2)" }}>{t}</motion.span>
                 ))}
               </div>
               <div className="mt-5 flex gap-3 relative z-10">
@@ -331,7 +331,7 @@ export default function App() {
                 </motion.a>
                 <motion.a href={p.live} target="_blank" rel="noreferrer"
                   className={`flex items-center gap-1.5 rounded-full bg-gradient-to-r ${p.color} px-4 py-2 text-xs font-semibold text-white`}
-                  whileHover={{ scale: 1.05, boxShadow: "0 8px 24px rgba(6,182,212,.4)" }} whileTap={{ scale: 0.95 }}>
+                  whileHover={{ scale: 1.05, boxShadow: "0 8px 24px rgba(96,165,250,.4)" }} whileTap={{ scale: 0.95 }}>
                   <ExternalLink className="h-3.5 w-3.5" /> Live Demo
                 </motion.a>
               </div>
@@ -343,7 +343,7 @@ export default function App() {
       {/* ── CONTACT ── */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-24">
         <motion.div className="mb-12" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">Contact</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Contact</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Let's build together</h2>
         </motion.div>
 
@@ -351,8 +351,8 @@ export default function App() {
           {/* form */}
           <motion.form className="rounded-2xl border border-white/8 bg-white/3 p-7 backdrop-blur-sm space-y-4 relative overflow-hidden"
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            whileHover={{ borderColor: "rgba(6,182,212,.3)" }}>
-            <motion.div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+            whileHover={{ borderColor: "rgba(96,165,250,.3)" }}>
+            <motion.div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
             {[
               { label: "Name", type: "text", placeholder: "Your name" },
               { label: "Email", type: "email", placeholder: "you@example.com" },
@@ -360,17 +360,17 @@ export default function App() {
               <label key={f.label} className="block text-sm text-slate-300 relative z-10">
                 {f.label}
                 <input type={f.type} placeholder={f.placeholder}
-                  className="mt-2 w-full rounded-xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30" />
+                  className="mt-2 w-full rounded-xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30" />
               </label>
             ))}
             <label className="block text-sm text-slate-300 relative z-10">
               Message
               <textarea rows={5} placeholder="Tell me about your idea..."
-                className="mt-2 w-full resize-none rounded-xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30" />
+                className="mt-2 w-full resize-none rounded-xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30" />
             </label>
             <motion.button type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-600 to-teal-600 px-7 py-3 text-sm font-bold text-white relative z-10"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6,182,212,.5)" }}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-bold text-white relative z-10"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(96,165,250,.5)" }}
               whileTap={{ scale: 0.95 }}>
               <Mail className="h-4 w-4" /> Send Message
             </motion.button>
@@ -379,16 +379,16 @@ export default function App() {
           {/* socials */}
           <motion.div className="rounded-2xl border border-white/8 bg-white/3 p-7 backdrop-blur-sm space-y-4"
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-5">Find me on</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Find me on</p>
             {[
               { icon: Linkedin, label: "LinkedIn", sub: "vishnumsofficial", url: "https://www.linkedin.com/in/vishnumsofficial", c: "from-blue-600 to-blue-700" },
               { icon: Github, label: "GitHub", sub: "github.com/vishnu", url: "https://github.com", c: "from-slate-700 to-slate-800" },
-              { icon: Instagram, label: "Instagram", sub: "@vishnu", url: "https://instagram.com", c: "from-sky-500 to-cyan-600" },
-              { icon: Mail, label: "Email", sub: "vishnums775@gmail.com", url: "mailto:vishnums775@gmail.com", c: "from-cyan-600 to-teal-600" },
+              { icon: Instagram, label: "Instagram", sub: "@vishnu", url: "https://instagram.com", c: "from-blue-500 to-indigo-600" },
+              { icon: Mail, label: "Email", sub: "vishnums775@gmail.com", url: "mailto:vishnums775@gmail.com", c: "from-blue-600 to-indigo-600" },
             ].map((s) => (
               <motion.a key={s.label} href={s.url} target="_blank" rel="noreferrer"
                 className="flex items-center gap-4 rounded-xl border border-white/8 p-4 group transition-all"
-                whileHover={{ scale: 1.04, borderColor: "rgba(6,182,212,.4)", backgroundColor: "rgba(6,182,212,.08)" }}
+                whileHover={{ scale: 1.04, borderColor: "rgba(96,165,250,.4)", backgroundColor: "rgba(96,165,250,.08)" }}
                 whileTap={{ scale: 0.97 }}>
                 <div className={`h-9 w-9 rounded-xl bg-gradient-to-br ${s.c} flex items-center justify-center flex-shrink-0`}>
                   <s.icon className="h-4 w-4 text-white" />
@@ -397,7 +397,7 @@ export default function App() {
                   <div className="text-sm font-semibold text-white">{s.label}</div>
                   <div className="text-xs text-slate-500 truncate">{s.sub}</div>
                 </div>
-                <ExternalLink className="h-4 w-4 text-slate-600 group-hover:text-cyan-400 ml-auto transition-colors flex-shrink-0" />
+                <ExternalLink className="h-4 w-4 text-slate-600 group-hover:text-blue-400 ml-auto transition-colors flex-shrink-0" />
               </motion.a>
             ))}
           </motion.div>
@@ -409,14 +409,14 @@ export default function App() {
         <motion.p className="text-sm text-slate-600"
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
           Built with ❤️ by{" "}
-          <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent font-semibold">Vishnu M S</span>
+          <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent font-semibold">Vishnu M S</span>
           {" "}— Started from zero, building towards infinity.
         </motion.p>
         <motion.div className="mt-4 flex justify-center gap-3"
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
           {[Zap, Rocket, Sparkles].map((Icon, i) => (
             <motion.div key={i} animate={{ y: [0, -6, 0] }} transition={{ duration: 1.2, delay: i * 0.2, repeat: Infinity }}>
-              <Icon className="h-4 w-4 text-cyan-500/50" />
+              <Icon className="h-4 w-4 text-blue-500/50" />
             </motion.div>
           ))}
         </motion.div>
